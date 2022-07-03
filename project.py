@@ -83,7 +83,8 @@ if __name__=="__main__":
             #calling swap_letter function to again rearranging charaters and obtaining orignal message
             #or to decrypt message
             decrypted = swap_letters(message)
-            decrypted.pop()
+            if decrypted[-1]=="@":
+                decrypted.pop()
             #it will show the decrypted message in messagebox
             messagebox.showinfo('Plaintext of the secret message is:', "".join(decrypted))
         #to break infinte loop
